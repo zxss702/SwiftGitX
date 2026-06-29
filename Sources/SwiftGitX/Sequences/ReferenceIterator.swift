@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 public class ReferenceIterator: IteratorProtocol {
     private var referenceIterator: UnsafeMutablePointer<git_reference_iterator>?

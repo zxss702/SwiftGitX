@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 public enum BranchType: LibGit2RawRepresentable {
     case all

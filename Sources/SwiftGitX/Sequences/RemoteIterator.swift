@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 public struct RemoteIterator: IteratorProtocol {
     private let remoteNames: [String]

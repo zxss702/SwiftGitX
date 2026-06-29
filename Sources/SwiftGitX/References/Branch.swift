@@ -5,7 +5,7 @@
 //  Created by İbrahim Çetin on 24.11.2025.
 //
 
-import libgit2
+import CGitKit
 
 /// A branch representation in the repository.
 public struct Branch: Reference, Sendable {

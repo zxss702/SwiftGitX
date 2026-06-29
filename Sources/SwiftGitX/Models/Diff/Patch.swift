@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 // ? Can we improve the implementation of the Patch struct?
 /// A patch represents changes to a single file.

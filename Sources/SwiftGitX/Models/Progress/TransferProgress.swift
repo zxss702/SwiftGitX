@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 public typealias TransferProgressHandler = (TransferProgress) -> Void
 

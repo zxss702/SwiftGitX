@@ -5,7 +5,7 @@
 //  Created by İbrahim Çetin on 23.11.2025.
 //
 
-import libgit2
+import CGitKit
 
 extension Repository {
     /// Fetch the objects and refs from the other repository.

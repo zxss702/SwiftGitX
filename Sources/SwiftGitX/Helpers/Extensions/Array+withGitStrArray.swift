@@ -1,5 +1,5 @@
 import Foundation
-import libgit2
+import CGitKit
 
 extension [String] {
     /// Converts the array of strings to a `git_strarray` instance.

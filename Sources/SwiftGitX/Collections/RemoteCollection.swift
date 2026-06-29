@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import libgit2
+import CGitKit
 
 /// A collection of remotes and their operations.
 public struct RemoteCollection: Sequence {

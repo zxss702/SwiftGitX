@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 /// Options for reset operation.
 public enum ResetOption: LibGit2RawRepresentable {

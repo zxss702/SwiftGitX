@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import libgit2
+import CGitKit
 
 /// A representation of a Git repository.
 public final class Repository: Sendable {

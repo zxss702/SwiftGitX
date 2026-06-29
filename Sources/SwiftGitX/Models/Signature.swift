@@ -1,5 +1,5 @@
 import Foundation
-import libgit2
+import CGitKit
 
 // ? Can we use LibGit2RawRepresentable here?
 /// A signature representation in the repository.

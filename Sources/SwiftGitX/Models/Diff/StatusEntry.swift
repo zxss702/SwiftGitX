@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 // ? Can we use LibGit2RawRepresentable here?
 /// Represents the status of a file in the repository.

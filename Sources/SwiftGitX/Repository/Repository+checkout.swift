@@ -5,7 +5,7 @@
 //  Created by İbrahim Çetin on 28.11.2025.
 //
 
-import libgit2
+import CGitKit
 
 extension Repository {
     // TODO: Implement checkout options as parameter

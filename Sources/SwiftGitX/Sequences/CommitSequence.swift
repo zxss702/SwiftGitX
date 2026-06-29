@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 /// A sequence of commits.
 ///

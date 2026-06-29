@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 // Only internal usage for now
 struct CheckoutOptions: Sendable {

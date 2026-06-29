@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import libgit2
+import CGitKit
 
 extension Repository {
     /// Restores working tree files.

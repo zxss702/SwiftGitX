@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import libgit2
+import CGitKit
 
 /// A collection of index operations.
 struct IndexCollection {

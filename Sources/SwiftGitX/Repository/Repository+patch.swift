@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import libgit2
+import CGitKit
 
 extension Repository {
     /// Creates a patch from the difference between two blobs.

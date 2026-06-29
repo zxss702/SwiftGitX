@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 public struct BranchSequence: Sequence {
     let type: BranchType

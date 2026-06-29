@@ -1,4 +1,4 @@
-import libgit2
+import CGitKit
 
 /// Options for stashing changes.
 public struct StashOption: OptionSet, Sendable {
