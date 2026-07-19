@@ -9,7 +9,7 @@ public struct StatusOption: OptionSet, Sendable {
     // MARK: - Initializers
 
     init(_ statusFlag: git_status_opt_t) {
-        rawValue = statusFlag.rawValue
+        rawValue = LibGit2RawValue.asUInt32(statusFlag.rawValue)
     }
 
     public init(rawValue: UInt32) {

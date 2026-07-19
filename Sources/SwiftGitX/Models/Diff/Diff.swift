@@ -130,7 +130,7 @@ extension Diff {
             path = String(cString: raw.path)
             size = Int(raw.size)
             flags = Flag.from(raw.flags)
-            mode = FileMode(raw: git_filemode_t(rawValue: UInt32(raw.mode)))
+            mode = FileMode(raw: git_filemode_t(rawValue: LibGit2RawValue.asCRawValue(raw.mode)))
 
             self.raw = raw
         }
@@ -173,23 +173,23 @@ extension Diff {
         static func from(_ flags: UInt32) -> [Flag] {
             var result = [Flag]()
 
-            if flags & GIT_DIFF_FLAG_BINARY.rawValue != 0 {
+            if flags & LibGit2RawValue.asUInt32(GIT_DIFF_FLAG_BINARY.rawValue) != 0 {
                 result.append(.binary)
             }
 
-            if flags & GIT_DIFF_FLAG_NOT_BINARY.rawValue != 0 {
+            if flags & LibGit2RawValue.asUInt32(GIT_DIFF_FLAG_NOT_BINARY.rawValue) != 0 {
                 result.append(.notBinary)
             }
 
-            if flags & GIT_DIFF_FLAG_VALID_ID.rawValue != 0 {
+            if flags & LibGit2RawValue.asUInt32(GIT_DIFF_FLAG_VALID_ID.rawValue) != 0 {
                 result.append(.validID)
             }
 
-            if flags & GIT_DIFF_FLAG_EXISTS.rawValue != 0 {
+            if flags & LibGit2RawValue.asUInt32(GIT_DIFF_FLAG_EXISTS.rawValue) != 0 {
                 result.append(.exists)
             }
 
-            if flags & GIT_DIFF_FLAG_VALID_SIZE.rawValue != 0 {
+            if flags & LibGit2RawValue.asUInt32(GIT_DIFF_FLAG_VALID_SIZE.rawValue) != 0 {
                 result.append(.validSize)
             }
 

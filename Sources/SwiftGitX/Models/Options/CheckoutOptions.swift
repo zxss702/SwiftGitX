@@ -44,7 +44,7 @@ struct CheckoutStrategy: OptionSet {
     // MARK: - Initializers
 
     init(_ strategy: git_checkout_strategy_t) {
-        rawValue = strategy.rawValue
+        rawValue = LibGit2RawValue.asUInt32(strategy.rawValue)
     }
 
     public init(rawValue: UInt32) {

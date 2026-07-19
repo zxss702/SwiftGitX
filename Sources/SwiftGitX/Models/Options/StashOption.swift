@@ -9,7 +9,7 @@ public struct StashOption: OptionSet, Sendable {
     // MARK: - Initializers
 
     init(_ stashFlag: git_stash_flags) {
-        rawValue = stashFlag.rawValue
+        rawValue = LibGit2RawValue.asUInt32(stashFlag.rawValue)
     }
 
     public init(rawValue: UInt32) {

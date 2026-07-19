@@ -114,7 +114,7 @@ public struct Patch: Equatable, Hashable, Sendable {
             public let numberOfNewLines: Int
 
             init(raw: git_diff_line) {
-                type = LineType(raw: git_diff_line_t(UInt32(raw.origin)))
+                type = LineType(raw: git_diff_line_t(rawValue: LibGit2RawValue.asCRawValue(raw.origin)))
 
                 let buffer = UnsafeRawBufferPointer(start: raw.content, count: raw.content_len)
                 content = String(decoding: buffer, as: UTF8.self)

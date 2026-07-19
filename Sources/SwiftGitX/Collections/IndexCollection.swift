@@ -98,7 +98,8 @@ struct IndexCollection {
         var strArray = paths.gitStrArray
         defer { git_strarray_free(&strArray) }
 
-        let flags = GIT_INDEX_ADD_DEFAULT.rawValue | GIT_INDEX_ADD_DISABLE_PATHSPEC_MATCH.rawValue
+        let flags = LibGit2RawValue.asUInt32(GIT_INDEX_ADD_DEFAULT.rawValue)
+            | LibGit2RawValue.asUInt32(GIT_INDEX_ADD_DISABLE_PATHSPEC_MATCH.rawValue)
 
         // TODO: Implement options
         // Add the files to the index

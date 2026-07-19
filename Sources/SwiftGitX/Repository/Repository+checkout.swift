@@ -65,7 +65,7 @@ extension Repository {
         var options = git_checkout_options()
         git_checkout_options_init(&options, UInt32(GIT_CHECKOUT_OPTIONS_VERSION))
 
-        options.checkout_strategy = GIT_CHECKOUT_SAFE.rawValue
+        options.checkout_strategy = LibGit2RawValue.asUInt32(GIT_CHECKOUT_SAFE.rawValue)
 
         // Perform the checkout operation
         try git(operation: .checkout) {

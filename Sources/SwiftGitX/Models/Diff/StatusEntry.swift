@@ -24,7 +24,7 @@ public struct StatusEntry: Equatable, Hashable, Sendable {
     public let workingTree: Diff.Delta?
 
     init(raw: git_status_entry) {
-        status = Status.from(raw.status.rawValue)
+        status = Status.from(LibGit2RawValue.asUInt32(raw.status.rawValue))
 
         index =
             if let rawDelta = raw.head_to_index?.pointee {
@@ -105,7 +105,7 @@ public struct StatusEntry: Equatable, Hashable, Sendable {
         case conflicted
 
         static func from(_ flags: UInt32) -> [Status] {
-            Status.statusMapping.filter { flags & $0.value.rawValue != 0 }.map(\.key)
+            Status.statusMapping.filter { flags & LibGit2RawValue.asUInt32($0.value.rawValue) != 0 }.map(\.key)
         }
     }
 }

@@ -9,7 +9,7 @@ public struct LogSortingOption: OptionSet, Sendable {
     // MARK: - Initializers
 
     init(_ sortType: git_sort_t) {
-        rawValue = sortType.rawValue
+        rawValue = LibGit2RawValue.asUInt32(sortType.rawValue)
     }
 
     public init(rawValue: UInt32) {

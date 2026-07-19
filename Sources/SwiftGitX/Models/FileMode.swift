@@ -29,6 +29,6 @@ public enum FileMode: UInt32, LibGit2RawRepresentable {
     }
 
     var raw: git_filemode_t {
-        git_filemode_t(rawValue)
+        git_filemode_t(rawValue: LibGit2RawValue.asCRawValue(rawValue))
     }
 }

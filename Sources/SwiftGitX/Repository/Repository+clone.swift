@@ -33,7 +33,7 @@ extension Repository {
 
         // Initialize the clone options
         var cloneOptions = options.gitCloneOptions
-        cloneOptions.checkout_opts.checkout_strategy = GIT_CHECKOUT_SAFE.rawValue
+        cloneOptions.checkout_opts.checkout_strategy = LibGit2RawValue.asUInt32(GIT_CHECKOUT_SAFE.rawValue)
         cloneOptions.fetch_opts.callbacks.transfer_progress = transferProgressCallback
 
         // Set up the progress handler payload if provided
